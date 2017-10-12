@@ -49,3 +49,8 @@ body{
 	background: #007bb5;
 	color:#fff;
 }
+
+#imgProfilePic{
+	width: 150px;
+	height: 150px;
+}
