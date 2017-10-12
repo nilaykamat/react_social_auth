@@ -6,6 +6,14 @@ import Linkedin from './Linkedin/'
 import Twitter from './Twitter/'
 
 class Auth extends Component{
+	constructor(props){
+		super(props);
+		var accessToken = localStorage.getItem('accessToken');
+		if(accessToken){
+			console.log(this.props)
+			this.props.history.push("/profile");
+		}
+	}
     render(){
         return(
             <div>

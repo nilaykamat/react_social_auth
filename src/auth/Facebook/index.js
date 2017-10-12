@@ -3,7 +3,11 @@ import React, {Component} from 'react';
 import config from '../config';
 
 class Facebook extends Component{
-    
+    constructor(props){
+		super(props);
+		console.log(this.props);
+	}
+
     componentDidMount(){
         (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
@@ -22,7 +26,7 @@ class Facebook extends Component{
             });
         };
     }
-    
+	
     facebookLogin = () => {        
         window.FB.login(function(resp){
 			this.statusChangeCallback(resp);
@@ -55,8 +59,9 @@ class Facebook extends Component{
         window.FB.api('/me', function(user) {
 			console.log(user);
 			localStorage.setItem('name', user.name);
-            console.log('Successful login from facebook : ' + user.name);
-        });
+			console.log('Successful login from facebook : ' + user.name);
+			this.props.history.push("/profile");
+		});
     }
 
     render(){

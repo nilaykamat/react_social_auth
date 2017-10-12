@@ -3,7 +3,11 @@ import React, { Component } from 'react';
 import config from '../config';
 
 class Google extends Component{
-
+	constructor(props){
+		super(props);
+		console.log(this.props);
+	}
+	
     componentDidMount(){
         (function() {
             var e = document.createElement("script");
@@ -35,7 +39,8 @@ class Google extends Component{
                 if (e["access_token"]) {
 					localStorage.setItem('accessToken', e["access_token"]);
 					localStorage.setItem('network', 'Google');
-                    this.getUserGoogleProfile(e["access_token"])
+					this.getUserGoogleProfile(e["access_token"])
+					this.props.history.push("/profile");
                 } else if (e["error"]) {
                     console.log('Import error', 'Error occured while importing data')
                 }

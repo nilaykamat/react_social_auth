@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 
 import config from '../config';
 
-class Linkedin extends Component{    
+class Linkedin extends Component{
+	constructor(props){
+		super(props);
+		console.log(this.props);
+	}
+	
     componentDidMount(){
         (function() {
             var e = document.createElement("script");
@@ -36,6 +41,7 @@ class Linkedin extends Component{
 				localStorage.setItem('network', "Linkedin");
 				localStorage.setItem('image', result.values[0].pictureUrl);
 				localStorage.setItem('accessToken', result.values[0].id);
+				this.props.history.push("/profile");
 			}).error(function(err) {
 				console.log('Import error - Error occured while importing data')
 			});
