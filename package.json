@@ -1,0 +1,29 @@
+{
+  "name": "react_social_auth",
+  "version": "1.0.0",
+  "description": "Solical Authentication application using React",
+  "scripts": {
+    "start": "react-scripts start",
+	"build": "react-scripts build",
+	"test": "react-scripts test --env=jsdom",
+	"eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nilaykamat/react_social_auth.git"
+  },
+  "author": "Nilay Kamat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nilaykamat/react_social_auth/issues"
+  },
+  "homepage": "https://github.com/nilaykamat/react_social_auth#readme",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0"
+  },
+  "devDependencies": {
+	"react-scripts": "^1.0.14"
+  }
+}
