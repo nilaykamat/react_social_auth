@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Switch, Route } from 'react-router-dom'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+
 import Auth from './auth/';
 import Profile from './profile/';
 import './index.css';
