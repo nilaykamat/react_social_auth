@@ -1,12 +1,12 @@
 {
   "name": "react_social_auth",
   "version": "1.0.0",
-  "description": "Solical Authentication application using React",
+  "description": "Social Authentication application using React",
   "scripts": {
     "start": "react-scripts start",
-	"build": "react-scripts build",
-	"test": "react-scripts test --env=jsdom",
-	"eject": "react-scripts eject"
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,6 @@
     "react-router": "^4.2.0"
   },
   "devDependencies": {
-	"react-scripts": "^1.0.14"
+    "react-scripts": "^1.0.14"
   }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Facebook from './Facebook/'
 import Google from './Google/'
+import Linkedin from './Linkedin/'
 
 class Auth extends Component{
     render(){
@@ -12,8 +13,8 @@ class Auth extends Component{
 				<div id="social-buttons">
 					<Facebook />
 					<Google />
+					<Linkedin />
 					<button id="btnTwitter">Twitter Login</button>
-					<button id="btnLinkedin">Linkedin Login</button>
 				</div>
             </div>
         )

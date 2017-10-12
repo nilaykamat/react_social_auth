@@ -17,7 +17,6 @@ class GoogleLogin extends Component{
     
     //Triggering login for google
     googleLogin = () => {
-        let response = null;
         window.gapi.auth.signIn({
             callback: function(authResponse) {
                 this.googleSignInCallback(authResponse)
@@ -63,7 +62,7 @@ class GoogleLogin extends Component{
                 console.log(e);
                 return;
             }
-        }.bind(this));
+        });
     }
     
     render(){
