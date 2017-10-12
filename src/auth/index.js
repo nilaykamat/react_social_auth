@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+
 import Facebook from './Facebook/'
+import Google from './Google/'
 
 class Auth extends Component{
-    
     render(){
         return(
             <div>
@@ -10,7 +11,7 @@ class Auth extends Component{
 				<hr/>
 				<div id="social-buttons">
 					<Facebook />
-					<button id="btnGoogle">Google Login</button>
+					<Google />
 					<button id="btnTwitter">Twitter Login</button>
 					<button id="btnLinkedin">Linkedin Login</button>
 				</div>
