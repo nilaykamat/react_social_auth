@@ -3,6 +3,8 @@ body{
 	background: #eee;
 	font-family: 'Lato', sans-serif;
 	color: #555;
+	background-image: url('./back.jpg');
+	background-repeat: repeat;
 }
 
 #app{
@@ -23,7 +25,7 @@ body{
 	margin: 0 auto;
 }
 
-#social-buttons > button{
+#social-buttons > button, #btnLogout{
 	width: 100%;
 	display: block;
 	padding: 10px;
@@ -53,4 +55,9 @@ body{
 #imgProfilePic{
 	width: 150px;
 	height: 150px;
+}
+
+#btnLogout{
+	background: #17539e;
+	color:#fff;
 }

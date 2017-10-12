@@ -12,6 +12,16 @@ class Profile extends Component{
 			// this.context.history.push('/')
 		}
 	}
+
+	logout = () => {
+		console.log("Logging Out");
+		localStorage.removeItem('name');
+		localStorage.removeItem('network');
+		localStorage.removeItem('image');
+		localStorage.removeItem('accessToken');
+		// this.context.history.push('/')
+	}
+
     render(){
 		var image;
 		if(localStorage.getItem('image')){
@@ -25,7 +35,8 @@ class Profile extends Component{
 				<hr />
 				<h2>Hello {localStorage.getItem('name')}</h2>
 				<h3>from {localStorage.getItem('network')}</h3>
-                
+				<hr />
+                <button id="btnLogout" onClick={() => this.logout()}>LOGOUT</button>
             </div>
         )
     }
