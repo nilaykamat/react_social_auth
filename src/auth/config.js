@@ -5,5 +5,10 @@ export default {
 		api_key 	: "81hqz2lqe842yy",
 		api_secret 	: "K0MAY0SpTKsA8Xj0"
 	},
-	twitter 	: ""
+	twitter 	: "",	//twitter doesnt allow auth from javascript front end. Using firebase instead
+	firebase 	: {
+		apiKey: "AIzaSyDfs10N7k4tuw0zEAQwNSMm0chfCfkiQ98",
+		authDomain: "react-social-auth.firebaseapp.com",
+		projectId: "react-social-auth"
+	}
 }

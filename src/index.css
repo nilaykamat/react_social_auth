@@ -1,9 +1,9 @@
 @import url('//fonts.googleapis.com/css?family=Lato');
 body{
-	background: #eee;
+	background: #777;
 	font-family: 'Lato', sans-serif;
 	color: #555;
-	background-image: url('./back.jpg');
+	background-image: url('./back.png');
 	background-repeat: repeat;
 }
 
