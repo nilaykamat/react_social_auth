@@ -25,7 +25,6 @@ class Twitter extends Component{
 			localStorage.setItem('network', "Twitter");
 			localStorage.setItem('image', result.additionalUserInfo.profile.profile_image_url);
 			localStorage.setItem('accessToken', result.credential.accessToken);
-
 		}).catch(function(error) {
 			var errorCode = error.code;
 			var errorMessage = error.message;
