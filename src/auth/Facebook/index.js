@@ -22,7 +22,11 @@ class Facebook extends Component{
             });
         };
     }
-    
+	
+	redirectToProfile = () => {
+		this.props.history.push("/profile");
+	}
+
     facebookLogin = () => {        
         window.FB.login(function(resp){
 			this.statusChangeCallback(resp);
@@ -55,8 +59,10 @@ class Facebook extends Component{
         window.FB.api('/me', function(user) {
 			console.log(user);
 			localStorage.setItem('name', user.name);
-            console.log('Successful login from facebook : ' + user.name);
-        });
+			console.log('Successful login from facebook : ' + user.name);
+			this.redirectToProfile();
+		}.bind(this));
+		// this.props.history.push("/profile");
     }
 
     render(){

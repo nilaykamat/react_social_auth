@@ -6,16 +6,24 @@ import Linkedin from './Linkedin/'
 import Twitter from './Twitter/'
 
 class Auth extends Component{
+	constructor(props){
+		super(props);
+		var accessToken = localStorage.getItem('accessToken');
+		if(accessToken){
+			console.log(this.props)
+			this.props.history.push("/profile");
+		}
+	}
     render(){
         return(
             <div>
 				<h3 className="centered">Social Login</h3>
 				<hr/>
 				<div id="social-buttons">
-					<Facebook />
-					<Google />
-					<Linkedin />
-					<Twitter />
+					<Facebook {...this.props}  />
+					<Google {...this.props}  />
+					<Linkedin {...this.props}  />
+					<Twitter {...this.props}  />
 				</div>
             </div>
         )

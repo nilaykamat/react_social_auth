@@ -1,15 +1,12 @@
 import React, {Component} from 'react';
 
-
-//import config from '../../../config';
-
 class Profile extends Component{
 	constructor(props) {
 		super(props);
 		var accessToken = localStorage.getItem('accessToken');
 		console.log(accessToken);
 		if(!accessToken){
-			// this.context.history.push('/')
+			this.props.history.push("/");
 		}
 	}
 
@@ -19,7 +16,7 @@ class Profile extends Component{
 		localStorage.removeItem('network');
 		localStorage.removeItem('image');
 		localStorage.removeItem('accessToken');
-		// this.context.history.push('/')
+		this.props.history.push("/");
 	}
 
     render(){

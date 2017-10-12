@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import config from '../config';
 
-class Linkedin extends Component{    
+class Linkedin extends Component{
+	
     componentDidMount(){
         (function() {
             var e = document.createElement("script");
@@ -26,6 +27,7 @@ class Linkedin extends Component{
 	}
 	
     getUserDetails = () => {
+		var props = this.props;
 		console.log("Trying To get User details");
         window.IN.User.authorize( function(){ 
             window.IN.API.Profile("me").fields(
@@ -36,10 +38,11 @@ class Linkedin extends Component{
 				localStorage.setItem('network', "Linkedin");
 				localStorage.setItem('image', result.values[0].pictureUrl);
 				localStorage.setItem('accessToken', result.values[0].id);
+				props.history.push("/profile");
 			}).error(function(err) {
 				console.log('Import error - Error occured while importing data')
 			});
-        });
+		});
     }
     render(){
         return(
