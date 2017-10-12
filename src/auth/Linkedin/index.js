@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import config from '../config';
 
-class LinkedinLogin extends Component{    
+class Linkedin extends Component{    
     componentDidMount(){
         (function() {
             var e = document.createElement("script");
@@ -48,4 +48,4 @@ class LinkedinLogin extends Component{
     }
 }
 
-export default LinkedinLogin;
+export default Linkedin;

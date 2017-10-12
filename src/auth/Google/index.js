@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import config from '../config';
 
-class GoogleLogin extends Component{
+class Google extends Component{
 
     componentDidMount(){
         (function() {
@@ -72,4 +72,4 @@ class GoogleLogin extends Component{
     }
 }
 
-export default GoogleLogin;
+export default Google;
