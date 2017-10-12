@@ -31,7 +31,7 @@ class Profile extends Component{
 		}
         return(
             <div className="centered">
-				<img id="imgProfilePic" src={image} />
+				<img id="imgProfilePic" alt="Profile" src={image} />
 				<hr />
 				<h2>Hello {localStorage.getItem('name')}</h2>
 				<h3>from {localStorage.getItem('network')}</h3>

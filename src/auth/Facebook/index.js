@@ -30,7 +30,7 @@ class Facebook extends Component{
     }
     
     checkLoginState() {
-        console.log( "Checking login status..........." );        
+		console.log( "Checking login status..........." );        
         window.FB.getLoginStatus(function(response) {
             console.log(response)
             this.statusChangeCallback(response);
