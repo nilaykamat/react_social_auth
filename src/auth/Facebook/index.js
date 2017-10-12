@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import config from '../config';
+
 class Facebook extends Component{
     
     componentDidMount(){
@@ -13,7 +15,7 @@ class Facebook extends Component{
         
         window.fbAsyncInit = function() {
             window.FB.init({
-              appId      : "1522062204519018",
+              appId      : config.facebook,
               cookie     : true,  // enable cookies to allow the server to access the session
               xfbml      : true,  // parse social plugins on this page
               version    : 'v2.8' // use version 2.8
@@ -54,7 +56,6 @@ class Facebook extends Component{
 			console.log(user);
 			localStorage.setItem('name', user.name);
             console.log('Successful login from facebook : ' + user.name);
-            alert( 'Successful login for: ' + user.name );
         });
     }
 
