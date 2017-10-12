@@ -13,10 +13,11 @@ class Profile extends Component{
 		}
 	}
     render(){
+		var image;
 		if(localStorage.getItem('image')){
-			var image = localStorage.getItem('image');
+			image = localStorage.getItem('image');
 		} else{
-			var image = "https://svet.fri.uni-lj.si/wp-content/uploads/2014/12/Avatar-150x150.png";
+			image = "https://svet.fri.uni-lj.si/wp-content/uploads/2014/12/Avatar-150x150.png";
 		}
         return(
             <div className="centered">
