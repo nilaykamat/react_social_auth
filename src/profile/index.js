@@ -6,7 +6,6 @@ class Profile extends Component{
 		var accessToken = localStorage.getItem('accessToken');
 		console.log(accessToken);
 		if(!accessToken){
-			console.log(this.props)
 			this.props.history.push("/");
 		}
 	}
@@ -17,7 +16,6 @@ class Profile extends Component{
 		localStorage.removeItem('network');
 		localStorage.removeItem('image');
 		localStorage.removeItem('accessToken');
-		console.log(this.props);
 		this.props.history.push("/");
 	}
 

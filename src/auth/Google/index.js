@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 import config from '../config';
 
 class Google extends Component{
-	constructor(props){
-		super(props);
-		console.log(this.props);
-	}
 	
     componentDidMount(){
         (function() {
@@ -18,13 +14,17 @@ class Google extends Component{
             t.parentNode.insertBefore(e, t)
         })();    
     }
-    
+	
+	redirectToProfile = () => {
+		this.props.history.push("/profile");
+	}
+
     //Triggering login for google
     googleLogin = () => {
         window.gapi.auth.signIn({
             callback: function(authResponse) {
                 this.googleSignInCallback(authResponse)
-            }.bind( this ),
+            }.bind(this),
             clientid: config.google, //Google client Id
             cookiepolicy: "single_host_origin",
             requestvisibleactions: "http://schema.org/AddAction",
@@ -39,14 +39,14 @@ class Google extends Component{
                 if (e["access_token"]) {
 					localStorage.setItem('accessToken', e["access_token"]);
 					localStorage.setItem('network', 'Google');
-					this.getUserGoogleProfile(e["access_token"])
-					this.props.history.push("/profile");
+					this.getUserGoogleProfile(e["access_token"]);
+					this.redirectToProfile();
                 } else if (e["error"]) {
-                    console.log('Import error', 'Error occured while importing data')
+					console.log('Import error', 'Error occured while importing data');
                 }
             }.bind(this));
         } else {
-            console.log('Oops... Error occured while importing data')
+            console.log('Oops... Error occured while importing data');
         }
     }
 
@@ -64,10 +64,9 @@ class Google extends Component{
 				// alert("Successfull login from google : "+ e.displayName )
 				localStorage.setItem('name', e.displayName);
 				localStorage.setItem('image', e.image.url);
-                console.log(e);
-                return;
+				this.redirectToProfile();
             }
-        });
+        }.bind(this));
     }
     
     render(){

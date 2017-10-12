@@ -20,10 +20,10 @@ class Auth extends Component{
 				<h3 className="centered">Social Login</h3>
 				<hr/>
 				<div id="social-buttons">
-					<Facebook />
-					<Google />
-					<Linkedin />
-					<Twitter />
+					<Facebook {...this.props}  />
+					<Google {...this.props}  />
+					<Linkedin {...this.props}  />
+					<Twitter {...this.props}  />
 				</div>
             </div>
         )
