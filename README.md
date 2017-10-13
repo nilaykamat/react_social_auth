@@ -16,3 +16,7 @@ Take a clone of the repository and run the following command inside the cloned d
 <pre>npm install</pre>
 Once the setup is complete, you can start the application using the following command
 <pre>npm start</pre>
+<hr />
+<h3>Testing :</h3>
+All Tests are written in srv/__tests__ directory. To run all the tests, run the following command.
+<pre>npm test</pre>
