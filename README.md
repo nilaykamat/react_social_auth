@@ -1,5 +1,4 @@
-# ReactJS social media authentication
-
+# react_social_auth
 <p>This application contains code snippets to allow login using following social media accounts</p>
 <ul>
 	<li>Facebook</li>
